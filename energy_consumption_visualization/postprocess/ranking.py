@@ -18,7 +18,7 @@ from ..render.util import subplots, get_local_timezone
 from ..util import  get_output_paths
 from ..sample import Sample
 
-LOGGER = logging.getLogger('d2_dashboard.postprocess.ranking')
+LOGGER = logging.getLogger('energy_consumption_visualization.postprocess.ranking')
 
 # Path to the directory containing the emojis
 _EMOJI_DIR = Path(__file__).resolve().parents[1] / 'render' / 'emojis'
@@ -97,12 +97,12 @@ def _build_resampled_series(
 
 def _median_across_sites(series_by_site: dict[str, pd.Series]) -> pd.Series:
     """Calculate the median across all sites."""
-    return pd.concat(series_by_site, axis=1, copy=False).median(axis=1)  # type: ignore[return-value]
+    return pd.concat(series_by_site, axis=1).median(axis=1)  # type: ignore[return-value]
 
 def _rank_sites(series_by_site: dict[str, pd.Series]) -> OrderedDict:
     """Rank the sites by the sum of the series."""
     return OrderedDict(
-        pd.concat(series_by_site, axis=1, copy=False).sum().sort_values(ascending=True)
+        pd.concat(series_by_site, axis=1).sum().sort_values(ascending=True)
     )
 
 def _build_ranking_table(
