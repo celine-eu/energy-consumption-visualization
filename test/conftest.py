@@ -12,7 +12,7 @@ from energy_consumption_visualization.config import (
     CompareConfig,
     RankingConfig,
 )
-from tests.helpers import (
+from test.helpers import (
     TEMPLATE_SVG,
     FakeHistoryProvider,
     make_channel_config,

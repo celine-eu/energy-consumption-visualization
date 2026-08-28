@@ -177,7 +177,7 @@ def make_channel_config(
         history_window=timedelta(days=7),
         history_provider=HistoryProviderConfig(
             dp_name='heat_kwh',
-            dp_data_provider='D2-Regularize',
+            dp_data_provider='data_provider',
         ),
         ranking_config=ranking_config,
         compare_config=compare_config,

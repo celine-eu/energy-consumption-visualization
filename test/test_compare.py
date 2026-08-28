@@ -9,7 +9,7 @@ from energy_consumption_visualization.postprocess.compare import (
     _build_measurement_series,
     compare,
 )
-from tests.helpers import make_samples
+from test.helpers import make_samples
 
 
 def test_build_measurement_series_empty_samples(compare_config, start_time):

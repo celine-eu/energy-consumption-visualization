@@ -7,7 +7,7 @@ from energy_consumption_visualization.history.fetch import (
     fetch_histories,
 )
 from energy_consumption_visualization.history.provider import HistoryProvider
-from tests.helpers import FakeHistoryProvider, make_channel_config, make_samples
+from test.helpers import FakeHistoryProvider, make_channel_config, make_samples
 
 
 def test_parse_quality_bare_label():

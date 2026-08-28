@@ -5,7 +5,7 @@ from pathlib import Path
 import pytest
 
 from energy_consumption_visualization.config import ChannelConfig
-from tests.helpers import TEMPLATE_SVG
+from test.helpers import TEMPLATE_SVG
 
 
 def _sites():
@@ -80,7 +80,7 @@ def _channel_entry(template_path: Path, **overrides) -> dict:
         'history_window': '1w',
         'history_provider': {
             'dp_name': 'heat_kwh',
-            'dp_data_provider': 'D2-Regularize',
+            'dp_data_provider': 'data_provider',
         },
         'ranking': _ranking_dict(template_path),
         'compare': _compare_dict(template_path),

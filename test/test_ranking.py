@@ -15,7 +15,7 @@ from energy_consumption_visualization.postprocess.ranking import (
     _select_emoticon,
     ranking,
 )
-from tests.helpers import make_samples
+from test.helpers import make_samples
 
 
 def test_samples_to_series_resamples_sum(start_time):

@@ -3,7 +3,7 @@ import threading
 from unittest.mock import MagicMock, patch
 
 from energy_consumption_visualization.channel import Channel
-from tests.helpers import make_channel_config, make_samples
+from test.helpers import make_channel_config, make_samples
 
 
 def _make_channel(config, provider) -> Channel:
