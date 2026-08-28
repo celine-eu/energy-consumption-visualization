@@ -1,0 +1,16 @@
+flowchart TB
+  subgraph historyProv [History provider]
+    getHistory["get_history(identity, start, end)"]
+    timescale[TimescaleDB]
+    upcomingHist["Upcoming: HTTP/REST"]
+    getHistory --> timescale
+    getHistory -.-> upcomingHist
+  end
+
+  subgraph ioSrc [IO source]
+    samples[New samples per site]
+    redisStreams[Redis streams]
+    upcomingIo["Upcoming: HTTP/REST"]
+    samples --> redisStreams
+    samples -.-> upcomingIo
+  end

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect id="title" x="40" y="40" width="1000" height="80" fill="#eeeeee"/>
+  <rect id="slot1" x="40" y="160" width="1000" height="500" fill="#eeeeee"/>
+  <rect id="slot2" x="40" y="700" width="1000" height="500" fill="#eeeeee"/>
+  <rect id="slot3" x="40" y="1240" width="1000" height="500" fill="#eeeeee"/>
+</svg>

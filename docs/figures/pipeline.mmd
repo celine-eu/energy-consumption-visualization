@@ -1,0 +1,8 @@
+flowchart LR
+  ioSource[IO source]
+  fetchHistory[Fetch history]
+  postprocess["Ranking and/or compare"]
+  embed[Embed in SVG template]
+  writeOut[Write SVG and PNG]
+
+  ioSource --> fetchHistory --> postprocess --> embed --> writeOut

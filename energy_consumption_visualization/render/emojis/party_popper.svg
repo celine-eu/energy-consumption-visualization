@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 36 36"
+   width="36"
+   height="36"
+   version="1.1"
+   id="svg13"
+   sodipodi:docname="party_popper.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs13" />
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="8.141549"
+     inkscape:cx="25.977858"
+     inkscape:cy="-7.3081916"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g15" />
+  <title
+     id="title1">party popper</title>
+  <g
+     id="g13"
+     transform="matrix(1.1599317,0,0,1.1626982,-2.9698576,-2.8372634)"
+     style="stroke-width:0.861094">
+    <g
+       id="g15"
+       transform="matrix(1.1113665,0,0,1.1113616,-4.6510773,0.87518426)"
+       style="stroke-width:0.774808">
+      <g
+         id="g14"
+         style="stroke-width:0.62013"
+         transform="matrix(1.2492536,0,0,1.2496059,-1.840417,-7.0930295)">
+        <path
+           d="M 7.3827089,28.415965 13.6,15.2 c 2.6,1.333333 5,3.733333 7.2,7.2 z"
+           fill="#E8632C"
+           id="path1"
+           style="fill:#ffd95d;fill-opacity:1;stroke-width:0.62013"
+           sodipodi:nodetypes="cccc" />
+        <path
+           d="m 11.384236,19.910003 2.707118,5.49798 C 17.196795,23.562021 18,24 20.8,22.4 c -2.236335,-3.4 -3.567667,-5 -7.2,-7.2 -1.506107,2.45 -2.215764,4.710003 -2.215764,4.710003 z"
+           fill="#F2A03D"
+           id="path2"
+           style="fill:#f9b500;fill-opacity:1;stroke-width:0.62013"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           d="M 7.3827089,28.415965 13.6,15.2 c 2.6,1.333333 5,3.733333 7.2,7.2 z"
+           fill="none"
+           stroke="#C94A18"
+           stroke-width="0.596765"
+           id="path3"
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.36428;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           sodipodi:nodetypes="cccc" />
+      </g>
+      <path
+         d="M 18.878608,11.306318 Q 23.208074,6.0295671 21.633723,2.2604595"
+         fill="none"
+         stroke="#F2C43D"
+         stroke-width="1.11942"
+         stroke-linecap="round"
+         id="path4"
+         style="stroke:#f9b500;stroke-width:1.70458;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         d="m 23.037236,15.07359 q 5.877913,-2.030648 10.525528,-1.035397"
+         fill="none"
+         stroke="#E8425B"
+         stroke-width="1.11942"
+         stroke-linecap="round"
+         id="path5"
+         style="stroke:#d1503c;stroke-width:1.70458;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         d="m 25.347263,17.916687 q 4.83024,-0.05876 8.215521,2.68496"
+         fill="none"
+         stroke="#5fbf6b"
+         stroke-width="1.11942"
+         stroke-linecap="round"
+         id="path6"
+         style="stroke-width:1.70458;stroke-dasharray:none" />
+      <circle
+         cx="24"
+         cy="7"
+         r="2"
+         fill="#4A90D9"
+         id="circle6"
+         style="fill:#3a7ca5;fill-opacity:1;stroke-width:0.774808" />
+      <circle
+         cx="30"
+         cy="10.452226"
+         r="1.7"
+         fill="#E8425B"
+         id="circle7"
+         style="fill:#d1503c;fill-opacity:1;stroke-width:0.774808" />
+      <circle
+         cx="28.551458"
+         cy="15.180036"
+         r="1.6"
+         fill="#5fbf6b"
+         id="circle8"
+         style="stroke-width:0.772236" />
+      <circle
+         cx="19"
+         cy="5"
+         r="1.5"
+         fill="#F2C43D"
+         id="circle9"
+         style="fill:#f9b500;fill-opacity:1;stroke-width:0.774808" />
+      <circle
+         cx="32"
+         cy="5"
+         r="1.5"
+         fill="#9b6fd0"
+         id="circle10"
+         style="stroke-width:0.772236" />
+      <circle
+         cx="32.55146"
+         cy="18.565403"
+         r="1.3"
+         fill="#F2A03D"
+         id="circle11"
+         style="fill:#f9b500;fill-opacity:1;stroke-width:0.774808" />
+      <rect
+         x="14.876094"
+         y="19.11125"
+         width="3"
+         height="2"
+         rx="0.38769984"
+         fill="#E8425B"
+         transform="rotate(-25)"
+         id="rect11"
+         style="fill:#d1503c;fill-opacity:1;stroke-width:0.774808"
+         ry="0.38710779" />
+      <rect
+         x="26.592926"
+         y="-14.19187"
+         width="3"
+         height="2"
+         rx="0.38748357"
+         fill="#5fbf6b"
+         transform="rotate(40)"
+         id="rect12"
+         style="stroke-width:0.772236"
+         ry="0.38732356" />
+      <rect
+         x="30.473013"
+         y="11.874242"
+         width="3"
+         height="2"
+         rx="0.3878029"
+         fill="#4A90D9"
+         transform="rotate(15)"
+         id="rect13"
+         style="fill:#3a7ca5;fill-opacity:1;stroke-width:0.774808"
+         ry="0.38700515" />
+    </g>
+  </g>
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>party popper</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
