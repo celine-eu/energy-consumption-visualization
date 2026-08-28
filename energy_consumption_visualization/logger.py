@@ -4,7 +4,7 @@ import time
 # Render %(asctime)s in UTC to match the UTC timestamps in the data.
 logging.Formatter.converter = time.gmtime
 
-LOGGER = logging.getLogger('d2_dashboard')
+LOGGER = logging.getLogger('energy_consumption_visualization')
 
 # Disable propagation to root to avoid duplicate lines.
 LOGGER.propagate = False

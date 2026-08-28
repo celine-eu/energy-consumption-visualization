@@ -33,7 +33,7 @@ class Channel(threading.Thread):
         self._config = config
         self._history_provider = history_provider
         self._stop_event = stop_event
-        self._logger = logging.getLogger(f'd2_dashboard.{config.name}')
+        self._logger = logging.getLogger(f'energy_consumption_visualization.{config.name}')
 
         client = redis.Redis(connection_pool=redis_pool)
         streams_by_site = {

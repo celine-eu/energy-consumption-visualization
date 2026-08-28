@@ -8,7 +8,7 @@ from .provider import HistoryProvider
 from ..config import ChannelConfig, HistoryProviderConfig
 from ..sample import Sample
 
-LOGGER = logging.getLogger('d2_dashboard.history')
+LOGGER = logging.getLogger('energy_consumption_visualization.history')
 
 
 def fetch_channel_histories(

@@ -16,7 +16,7 @@ from ..render.util import get_local_timezone, subplots
 from ..util import get_output_paths
 from ..sample import Sample
 
-LOGGER = logging.getLogger('d2_dashboard.postprocess.compare')
+LOGGER = logging.getLogger('energy_consumption_visualization.postprocess.compare')
 
 def compare(
         measurement: str,

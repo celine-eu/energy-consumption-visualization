@@ -1,5 +1,5 @@
 """
-Sample data model for the D2 dashboard channels.
+Sample data model for the energy consumption visualization channels.
 """
 import dataclasses
 import datetime
