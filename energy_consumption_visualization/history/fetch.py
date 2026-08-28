@@ -39,6 +39,8 @@ def fetch_channel_histories(
             dp_device_id=hp.dp_device_id,
             dp_data_provider=hp.dp_data_provider,
             dp_unit=hp.dp_unit,
+            retry_n=hp.retry_n,
+            retry_wait_s=hp.retry_wait_s,
         )
         histories[site_id] = samples
         log.info(
@@ -70,6 +72,8 @@ def fetch_histories(
             dp_device_id=provider_config.dp_device_id,
             dp_data_provider=provider_config.dp_data_provider,
             dp_unit=provider_config.dp_unit,
+            retry_n=provider_config.retry_n,
+            retry_wait_s=provider_config.retry_wait_s,
         )
         log.info(
             f'Retrieved {len(samples)} samples for {provider_config.dp_name!r}/{provider_config.dp_location_code!r}'

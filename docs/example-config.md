@@ -75,6 +75,8 @@ channels:
             dp_unit: °C
             dp_data_provider: regularize
             dp_device_id: null
+            retry_n: 10
+            retry_wait_s: 10
 
 redis:
   host: localhost

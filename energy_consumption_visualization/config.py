@@ -16,6 +16,8 @@ class HistoryProviderConfig:
     dp_data_provider: typing.Optional[str] = None
     dp_device_id: typing.Optional[str] = None
     dp_location_code: typing.Optional[str] = None
+    retry_n: int = 0
+    retry_wait_s: float = 5
 
 @dataclasses.dataclass(frozen=True)
 class ChartConfig:

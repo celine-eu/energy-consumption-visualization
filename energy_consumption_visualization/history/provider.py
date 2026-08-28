@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import json
+import logging
+import time
 from datetime import datetime
 from peewee import PostgresqlDatabase, Query, SQL
 from typing import List, TypeAlias
@@ -14,6 +16,7 @@ from .timescaledb import (
     UnitemporalJsonbDetails,
 )
 
+LOGGER = logging.getLogger('energy_consumption_visualization.history')
 _VALID_QUALITIES = frozenset({'measured', 'imputed', 'forecast'})
 DetailsModel: TypeAlias = type[UnitemporalDoubleDetails] | type[UnitemporalJsonbDetails]
 
@@ -40,13 +43,58 @@ class HistoryProvider:
             dp_device_id: str | None = None,
             dp_data_provider: str | None = None,
             dp_unit: str | None = None,
+            retry_n: int = 0,
+            retry_wait_s: float = 5,
         ) -> List[Sample]:
         """
         Retrieve the history of samples for the given datapoint, start, and end.
 
         Quality is joined from the companion ``{dp_name}_quality`` jsonb series
         when present; otherwise samples default to ``measured``.
+
+        If the query returns no samples, retry up to ``retry_n`` times
+        (``retry_n=0`` disables retries), waiting ``retry_wait_s`` seconds
+        between attempts.
         """
+        samples = self._fetch_history(
+            dp_name,
+            start,
+            end,
+            dp_location_code,
+            dp_device_id,
+            dp_data_provider,
+            dp_unit,
+        )
+        for remaining in range(retry_n, 0, -1):
+            if samples:
+                break
+            LOGGER.info(
+                'Empty history for dp_name %s, dp_location_code %s; '
+                'retrying in %ss (%s attempt(s) left)',
+                dp_name, dp_location_code, retry_wait_s, remaining,
+            )
+            time.sleep(retry_wait_s)
+            samples = self._fetch_history(
+                dp_name,
+                start,
+                end,
+                dp_location_code,
+                dp_device_id,
+                dp_data_provider,
+                dp_unit,
+            )
+        return samples
+
+    def _fetch_history(
+            self,
+            dp_name: str,
+            start: datetime,
+            end: datetime,
+            dp_location_code: str | None = None,
+            dp_device_id: str | None = None,
+            dp_data_provider: str | None = None,
+            dp_unit: str | None = None,
+        ) -> List[Sample]:
         try:
             value_query = self._get_query(
                 UnitemporalDoubleDetails,

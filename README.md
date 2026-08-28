@@ -19,7 +19,8 @@ Data acquisition is done with the help of an IO source and a history provider:
   Listens for new samples per site. Waits until new samples from every configured site have arrived (multi-site barrier), then starts a processing round.
 - **History provider**:
   Retrieve samples for the interval `[end - history_window, end]` from a database.
-  Optionaly, sample quality is reported as `measured`, `imputed`, or `forecast` in case a corresponding quality series exists.
+  Optionally, sample quality is reported as `measured`, `imputed`, or `forecast` in case a corresponding quality series exists.
+  If a query returns no samples, the fetch is retried according to `retry_n` and `retry_wait_s` on that provider's config.
 
 **Current status:**
 [TimescaleDB](https://timescaledb.org/) for history, [Redis](https://redis.io/) streams for IO.
@@ -54,7 +55,7 @@ Per channel:
 - `sites`: each entry has `id`, `label`, and a positive `n_apartments`
 - `stream_template`: Redis stream pattern with `{site_id}`
 - `history_window`: duration (`ms`, `s`, `m`, `h`, `d`, `w`; bare numbers are seconds)
-- `history_provider`: datapoint identity for the channel series
+- `history_provider`: datapoint identity for the channel series (`dp_name` plus optional `dp_unit`, `dp_data_provider`, `dp_device_id`, `dp_location_code`); optional retry on empty results (`retry_n` with default `0`, `retry_wait_s` with default `5`)
 - optional `ranking` and/or `compare`
 
 Colors are names from [`energy_consumption_visualization/render/colors.py`](energy_consumption_visualization/render/colors.py) (`deep teal`, `golden amber`, `terracotta`, etc.).

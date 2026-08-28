@@ -105,6 +105,22 @@ def test_load_channel_configs_production_shape():
     assert config.compare_config is not None
     assert len(config.compare_config.compare_against) == 1
     assert config.compare_config.compare_against[0].history_provider.dp_name == 'outdoor_temp'
+    assert config.history_provider.retry_n == 0
+    assert config.history_provider.retry_wait_s == 5
+    assert config.compare_config.compare_against[0].history_provider.retry_n == 0
+    assert config.compare_config.compare_against[0].history_provider.retry_wait_s == 5
+
+
+def test_history_provider_retry_from_config():
+    entry = _channel_entry(TEMPLATE_SVG)
+    entry['history_provider'] = {
+        **entry['history_provider'],
+        'retry_n': 3,
+        'retry_wait_s': 2.5,
+    }
+    config = ChannelConfig.load_channel_configs({'heat': entry})[0]
+    assert config.history_provider.retry_n == 3
+    assert config.history_provider.retry_wait_s == 2.5
 
 
 def test_stream_for_fills_site_id():
